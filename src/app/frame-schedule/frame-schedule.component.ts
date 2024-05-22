@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 export class FrameScheduleComponent implements OnInit {
    // Array för att lagra kurser
   savedCourses: Course[] = [];
+  totalPoints: number = 0; // Variabel för att lagra det totala antalet poäng
 
   constructor(private frameScheduleService: GetFrameScheduleService) { }
 
@@ -26,8 +27,15 @@ export class FrameScheduleComponent implements OnInit {
     this.frameScheduleService.getFrameCourses().subscribe(courses => {
       //Lägg till dem i arrayen savedCourses
       this.savedCourses = courses;
+      this.calculateTotalPoints(); // Uppdatera det totala antalet poäng 
+
     });
   }
+
+    // Funktion för att beräkna det totala antalet poäng
+    calculateTotalPoints(): void {
+      this.totalPoints = this.savedCourses.reduce((total, course) => total + course.points, 0);
+    }
 
   removeCourse(course: Course): void {
     const key = course.courseCode; // Hämta nyckel för kursen
@@ -35,6 +43,9 @@ export class FrameScheduleComponent implements OnInit {
 
     // Uppdatera savedCourses genom att filtrera bort den borttagna kursen
     this.savedCourses = this.savedCourses.filter(savedCourse => savedCourse.courseCode !== course.courseCode);
+
+        // Uppdatera det totala antalet poäng
+        this.calculateTotalPoints();
   }
 
 

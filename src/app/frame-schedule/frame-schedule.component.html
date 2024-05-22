@@ -1,17 +1,20 @@
 <h1>Mitt Ramschema</h1>
+<div class="points-div">
+    <p>Totalt antal poäng för valda kurser: <b>{{ totalPoints }} hp</b></p>
+</div>
 <div>
-<mat-card *ngFor="let course of savedCourses">
-    <mat-card-header>
-      <mat-card-title>Kursnamn: {{ course.courseName }}</mat-card-title>
-      <mat-card-subtitle>Kurskod: {{ course.courseCode }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p><b>Poäng</b>: {{ course.points }}</p>
-      <p><b>Ämne</b>: {{ course.subject }}</p>
-      <p><b>Kursplan</b>:<a href="{{course.syllabus}}" target="_blank">Visa kursplan</a></p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button (click)="removeCourse(course)"><i class="fa-solid fa-trash"></i></button>
-      </mat-card-actions>
-  </mat-card>
+    <mat-card *ngFor="let course of savedCourses">
+        <mat-card-header>
+            <mat-card-title>Kursnamn: {{ course.courseName }}</mat-card-title>
+            <mat-card-subtitle>Kurskod: {{ course.courseCode }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p><b>Poäng</b>: {{ course.points }}</p>
+            <p><b>Ämne</b>: {{ course.subject }}</p>
+            <p><b>Kursplan</b>:<a href="{{course.syllabus}}" target="_blank">Visa kursplan</a></p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="removeCourse(course)"><i class="fa-solid fa-trash"></i></button>
+        </mat-card-actions>
+    </mat-card>
 </div>
