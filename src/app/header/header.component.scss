@@ -1,8 +1,6 @@
 /* Header */
 header {
     width: 100%;
-    background-color: rgba(141, 204, 226, 0.8);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-height: 80px;
 }
 
@@ -10,8 +8,14 @@ header {
 nav {
     display: flex;
     align-items: center;
+    max-width: 400px;
     justify-content: center;
-    background-color: rgba(141, 204, 226, 0.8);
+    background: rgba(235, 235, 235, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(235, 235, 235, 0.15);
     padding: 10px;
     margin-bottom: 20px;
 
@@ -50,11 +54,19 @@ nav {
         margin-left: 50px;
     }
 
+    nav {
+        margin-top: -30px;
+    }
+
   }
 
 @media screen and (max-width: 900px) {
     img {
         max-width: 100px;
+    }
+
+    nav {
+        margin-top: 8px;
     }
 
   }

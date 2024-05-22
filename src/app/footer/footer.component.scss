@@ -1,18 +1,28 @@
 footer {
     padding: 10px;
-    background-color: rgba(141, 204, 226, 0.8);
+    background: rgba(235, 235, 235, 0.08);
+    border-radius: 16px 16px 0px 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(235, 235, 235, 0.15);
+    margin-top: 3%;
 
     p {
         text-align: center;
-        color: white;
+        color: black;
     }
 
     a {
-        color: white;
+        color: black;
     }
 
     a:hover {
         color: rgb(220, 220, 220);
+    }
+
+    .empty-div {
+        padding-bottom: 3%;
     }
 
 }
