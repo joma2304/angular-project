@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Course } from '../models/course';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+// för att hämta från localstorage
 export class GetFrameScheduleService {
 
-
-  private storageKey = 'courses';
-
+  Courses: Course[] = [];
   constructor() { }
 
-  addCourse(course: Course): void {
-    const courses = this.getCourses();
-    courses.push(course);
-    localStorage.setItem(this.storageKey, JSON.stringify(courses));
+  getFrameCourses() {
+    this.Courses = [];
+    if (localStorage.length >= 1) {
+      for (let i = 0; i < localStorage.length; i++) {
+        
+        const key: string = localStorage.key(i)!;
+        
+        const value: string = localStorage.getItem(key)!;
+        let newCourse: Course = JSON.parse(value);
+        this.Courses.push(newCourse);
+      }
+    }
+    return of(this.Courses);
   }
-
-  getCourses(): Course[] {
-    const courses = localStorage.getItem(this.storageKey);
-    return courses ? JSON.parse(courses) : [];
-  }
-}
+};

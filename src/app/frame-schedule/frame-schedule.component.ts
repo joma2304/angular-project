@@ -3,21 +3,28 @@ import { Course } from '../models/course';
 import { GetFrameScheduleService } from '../service/get-frame-schedule.service';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+
 
 @Component({
   selector: 'app-frame-schedule',
   standalone: true,
   imports: [CommonModule,
-            MatTableModule],
+            MatTableModule, 
+            MatCardModule],
   templateUrl: './frame-schedule.component.html',
   styleUrl: './frame-schedule.component.scss'
 })
 export class FrameScheduleComponent implements OnInit {
-  courses: Course[] = [];
+  savedCourses: Course[] = [];
 
-  constructor(private GetFrameScheduleService: GetFrameScheduleService) { }
+  constructor(private frameScheduleService: GetFrameScheduleService) { }
 
   ngOnInit(): void {
-    this.courses = this.GetFrameScheduleService.getCourses();
+    this.frameScheduleService.getFrameCourses().subscribe(courses => {
+      this.savedCourses = courses;
+    });
   }
 }
+
+
