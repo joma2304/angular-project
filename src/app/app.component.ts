@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
