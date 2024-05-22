@@ -6,10 +6,27 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../assets/images/uu-pic.jpg");
+    background-size: cover;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 800px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.img-container img {
-    max-width: 800px;
-    width: 80%;
-    border-radius: 20px;
+.text-container {
+    text-align: center;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    border-radius: 15px;
+    color: white;
+    padding: 30px;
 }
+
+
+
+
+  
+  
+

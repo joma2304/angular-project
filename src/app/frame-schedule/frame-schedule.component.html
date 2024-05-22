@@ -6,12 +6,12 @@
       <mat-card-subtitle>Kurskod: {{ course.courseCode }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>Poäng: {{ course.points }}</p>
-      <p>Ämne: {{ course.subject }}</p>
-      <p>Kursplan: {{ course.syllabus }}</p>
+      <p><b>Poäng</b>: {{ course.points }}</p>
+      <p><b>Ämne</b>: {{ course.subject }}</p>
+      <p><b>Kursplan</b>:<a href="{{course.syllabus}}" target="_blank">Visa kursplan</a></p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button color="warn" (click)="removeCourse(course)">Ta bort</button>
+        <button mat-button (click)="removeCourse(course)"><i class="fa-solid fa-trash"></i></button>
       </mat-card-actions>
   </mat-card>
 </div>

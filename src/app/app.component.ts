@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatDialogModule,
     HttpClientModule,
+    FooterComponent
  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

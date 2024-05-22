@@ -1,10 +1,9 @@
 /* Header */
 header {
     width: 100%;
-    background-color: rgb(199, 199, 199);
+    background-color: rgba(141, 204, 226, 0.8);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    margin-bottom: 15px;
+    max-height: 80px;
 }
 
 /* Navigation */
@@ -12,6 +11,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(141, 204, 226, 0.8);
+    padding: 10px;
+    margin-bottom: 20px;
 
     ul {
         list-style: none;
@@ -26,16 +28,33 @@ nav {
                 color: black;
                 text-decoration: none;
                 transition: color 0.3s ease;
+                font-size: 1.3em;
 
                 &.active-link {
-                    color: rgb(255, 255, 255);
+                    text-decoration: underline;
+                    color: white;
                 }
             }
 
             a:hover {
-                color: rgb(29, 93, 127);
+                color: rgb(255, 255, 255);
             }
         }
     }
 
 }
+
+@media screen and (min-width: 901px) {
+    img {
+        max-width: 150px;
+        margin-left: 50px;
+    }
+
+  }
+
+@media screen and (max-width: 900px) {
+    img {
+        max-width: 100px;
+    }
+
+  }
