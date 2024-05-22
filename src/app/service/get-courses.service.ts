@@ -7,7 +7,7 @@ import { Course } from '../models/course';
   providedIn: 'root'
 })
 export class GetCoursesService {
-  url : string = 'https://matdah.github.io/DT208G---Programmering-i-TypeScript/Moment%205%20-%20Projekt/miun_courses.json';
+  url : string = 'https://matdah.github.io/DT208G---Programmering-i-TypeScript/Moment%205%20-%20Projekt/miun_courses.json'; //URl för kursdata
 
   constructor(private http: HttpClient) { }
 

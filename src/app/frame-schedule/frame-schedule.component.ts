@@ -16,18 +16,21 @@ import { MatCardModule } from '@angular/material/card';
   styleUrl: './frame-schedule.component.scss'
 })
 export class FrameScheduleComponent implements OnInit {
+   // Array för att lagra kurser
   savedCourses: Course[] = [];
 
   constructor(private frameScheduleService: GetFrameScheduleService) { }
 
   ngOnInit(): void {
+    //Hämta kurser från ramschemat
     this.frameScheduleService.getFrameCourses().subscribe(courses => {
+      //Lägg till dem i arrayen savedCourses
       this.savedCourses = courses;
     });
   }
 
   removeCourse(course: Course): void {
-    const key = course.courseCode; // 
+    const key = course.courseCode; // Hämta nyckel för kursen
     localStorage.removeItem(key); // Ta bort kursen från local storage med hjälp av key
 
     // Uppdatera savedCourses genom att filtrera bort den borttagna kursen

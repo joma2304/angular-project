@@ -8,17 +8,18 @@ import { of } from 'rxjs';
 // för att hämta från localstorage
 export class GetFrameScheduleService {
 
-  Courses: Course[] = [];
+  Courses: Course[] = []; //Lagra kursdata
   constructor() { }
 
   getFrameCourses() {
-    this.Courses = [];
-    if (localStorage.length >= 1) {
-      for (let i = 0; i < localStorage.length; i++) {
+    this.Courses = []; //Återställ till tom array
+    if (localStorage.length >= 1) { //Kollar om det finns kurser i localstorage
+      for (let i = 0; i < localStorage.length; i++) { //Loopa igenom dessa
         
-        const key: string = localStorage.key(i)!;
+        const key: string = localStorage.key(i)!; //Nyckel för den aktuella kursen
         
-        const value: string = localStorage.getItem(key)!;
+        const value: string = localStorage.getItem(key)!; //Hämta kursdata från localstorage baserat på nyckeln
+        //Lägg till datan i Kurs-array
         let newCourse: Course = JSON.parse(value);
         this.Courses.push(newCourse);
       }

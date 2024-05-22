@@ -14,13 +14,13 @@ import { CourseTableComponent } from '../course-table/course-table.component';
   styleUrl: './courses.component.scss'
 })
 export class CoursesComponent implements OnInit {
-  courses: Course[] = [];
+  courses: Course[] = []; //Array för att lagra kurser
 //Constructor för kurser
   constructor(private getCoursesService: GetCoursesService) { }
 //Funktion för att hämta kurser från courseservice och läsa ut kurser
   ngOnInit(): void {
-    this.getCoursesService.getCourses().subscribe((data: Course[]) => {
-      this.courses = data;
+    this.getCoursesService.getCourses().subscribe((data: Course[]) => { //Anropa GetCourseService för att hämta kurserna
+      this.courses = data; //Lägga till kurserna i arrayen
     });
   }
 }
