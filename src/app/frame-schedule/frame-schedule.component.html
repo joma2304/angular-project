@@ -11,7 +11,7 @@
       <p>Kursplan: {{ course.syllabus }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <!-- Eventuella knappar för att hantera kursen -->
-    </mat-card-actions>
+        <button mat-button color="warn" (click)="removeCourse(course)">Ta bort</button>
+      </mat-card-actions>
   </mat-card>
 </div>
