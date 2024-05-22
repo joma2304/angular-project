@@ -29,14 +29,14 @@ nav {
             margin: 0 10px;
 
             a {
-                color: black;
+                color: rgb(108, 108, 108);
                 text-decoration: none;
                 transition: color 0.3s ease;
                 font-size: 1.3em;
 
                 &.active-link {
                     text-decoration: underline;
-                    color: white;
+                    color: rgb(67, 121, 66);
                 }
             }
 
@@ -50,7 +50,7 @@ nav {
 
 @media screen and (min-width: 901px) {
     img {
-        max-width: 150px;
+        max-width: 140px;
         margin-left: 50px;
     }
 
