@@ -6,19 +6,27 @@
     max-width: 1200px;
 }
 
+.filters-div {
+    width: 100%;
+}
+
 /* Stil för filterformuläret */
 .filter-field {
     margin-bottom: 5px;
+    margin-right: 5px;
 }
 
 /* Stil för sökfältet */
 .filter-input {
-    width: 300px;
+    width: 100%;
+    height: 100px;
+    padding: 11px;
 }
 
 /* Stil för ämnesväljaren */
 .mat-form-field {
-    width: 300px;
+    width: 100%;
+    height: 100px;
 }
 
 /* Stil för tabellen */
@@ -30,12 +38,12 @@
 .items-page {
     margin-top: 20px;
     background: rgb(255, 255, 255);
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(9.5px);
     -webkit-backdrop-filter: blur(9.5px);
     border: 1px solid rgba(235, 235, 235, 0.15);
-
+    width: 100%;
 }
 
 button {
@@ -44,10 +52,35 @@ button {
 
 @media screen and (max-width: 720px) {
     .big-screen {
-        display: none;
+        display:  none; 
+    }
+
+    .filters-div {
+        max-width: 98%;
+    }
+
+    .filter-field {
+        margin-right: -5px;
+    }
+
+    .filter-subject {
+        width: 100%;
+        padding-right: 15px;
+        font-size: 80%;
     }
 }
 
 .add-btn:active {
-background-color: green;
+    background-color: green;
+}
+
+.course-table {
+    .filters-div {
+        display: flex;
+        gap: 1rem;
+
+        mat-form-field {
+            flex: 1;
+        }
+    }
 }
