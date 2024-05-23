@@ -62,8 +62,12 @@ button {
     }
 }
 
+.add-btn:hover {
+    background-color: rgb(36, 156, 36);
+}
+
 .add-btn:active {
-    background-color: green;
+    background-color: rgb(36, 156, 36);
 }
 
 .course-table {
