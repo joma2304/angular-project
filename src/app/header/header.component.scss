@@ -1,7 +1,13 @@
 /* Header */
 header {
     width: 100%;
-    max-height: 80px;
+    max-height: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(235, 235, 235, 0.15);
 }
 
 /* Navigation */
@@ -10,7 +16,7 @@ nav {
     align-items: center;
     max-width: 400px;
     justify-content: center;
-    background: rgba(235, 235, 235, 0.08);
+    background: rgba(255, 255, 255, 0.68);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.5px);
@@ -29,14 +35,14 @@ nav {
             margin: 0 10px;
 
             a {
-                color: rgb(108, 108, 108);
+                color: rgb(0, 0, 0);
                 text-decoration: none;
                 transition: color 0.3s ease;
                 font-size: 1.3em;
 
                 &.active-link {
                     text-decoration: underline;
-                    color: rgb(67, 121, 66);
+                    color: rgb(36, 24, 127);
                 }
             }
 

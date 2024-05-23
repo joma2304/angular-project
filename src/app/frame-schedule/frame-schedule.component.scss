@@ -1,6 +1,15 @@
 h1 {
-    margin-bottom: 20px;
     text-align: center;
+    color: black;
+    background: rgba(255, 255, 255, 0.68);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(235, 235, 235, 0.15);
+    max-width: 800px;
+    width: 95%;
+    margin-bottom: 10px;
 }
 
 .points-div {
@@ -9,18 +18,29 @@ h1 {
     justify-content: center;
     max-width: 400px;
     margin-bottom: 10px;
+    color: black;
+    background: rgba(255, 255, 255, 0.68);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(235, 235, 235, 0.15);
+    max-width: 400px;
+    width: 95%;
+    padding-top: 10px;
 }
 
 .points-div p {
     text-align: left;
     margin-bottom: 10px;
+    
 }
 
 mat-card {
     margin-bottom: 20px;
     max-width: 800px;
     text-align: center;
-    background: rgba(235, 235, 235, 0.08);
+    background: rgba(255, 255, 255, 0.68);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(9.5px);
@@ -43,7 +63,7 @@ mat-card-actions {
 }
 
 mat-card:hover {
-    background-color: rgba(175, 194, 162, 0.8);
+    background-color: rgba(228, 228, 228, 0.8);
 }
 
 button {

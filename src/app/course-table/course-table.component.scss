@@ -29,7 +29,7 @@
 /* Stil för paginator */
 .items-page {
     margin-top: 20px;
-    background: rgba(235, 235, 235, 0.08);
+    background: rgb(255, 255, 255);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(9.5px);
@@ -46,4 +46,8 @@ button {
     .big-screen {
         display: none;
     }
+}
+
+.add-btn:active {
+background-color: green;
 }
