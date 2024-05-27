@@ -11,18 +11,18 @@ Detta repo består av koden för [Universitet Universitetets](https://joma-proje
 - Startsida: Innehåller information/nyheter om lärosätet samt en knapp till kurstabell.
 - Not-found-sida: Text för page not found. 
 
-* Webbplatsen är skapad med hjälp av Angular samt Material UI.
+Webbplatsen är skapad med hjälp av Angular samt Material UI.
 
 ## Tjänster
 * getCourseService:
-- Hämtar data för kurserna från en JSON-fil.
+Hämtar data för kurserna från en JSON-fil.
 * getFrameScheduleService
-- Hämtar data för kurser i localStorage som ska visas i ramschemat.
+Hämtar data för kurser i localStorage som ska visas i ramschemat.
 
 ## Material UI
 * Material UI har används för att till tabellen med kurser samt paginering, sortering och filtrering för den.
 * Material UI har används för korten som visar kurser tillagda i ramschemat. 
-- Länk till dokumentation finns här: [Material UI](https://material.angular.io/)
+Länk till dokumentation finns här: [Material UI](https://material.angular.io/)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
